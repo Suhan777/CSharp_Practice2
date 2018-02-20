@@ -26,7 +26,10 @@ namespace Practice2.eContactClasses
 
         public string Gender { get; set; }
 
-        static string dbstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        public string dbstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+
+        
+
 
         //selecting data
 
@@ -62,6 +65,7 @@ namespace Practice2.eContactClasses
 
         public bool Insert(contactClass c)
         {
+            
 
             bool isSuccess = false;
 
@@ -115,6 +119,7 @@ namespace Practice2.eContactClasses
             bool isSuccess = false;
 
             SqlConnection conn = new SqlConnection(dbstrng);
+            // MySqlConnection conn2 = new MySqlConnection(dbstrng); //need to connect to MySQL 
 
             try
             {

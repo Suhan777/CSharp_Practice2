@@ -17,6 +17,10 @@ namespace Practice2
             InitializeComponent();
         }
 
+        eContactClasses.contactClass c = new eContactClasses.contactClass();
+       
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -79,10 +83,33 @@ namespace Practice2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            c.FirstName = textBox3.Text;
+            c.LastName = textBox2.Text;
+            c.ContactNum = textBox4.Text;
+            c.Gender = comboBox1.Text;
+            c.Address = textBox5.Text;
+
+            c.Insert(c);
+
 
         }
 
         private void E_Contact_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
